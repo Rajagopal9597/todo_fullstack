@@ -1,7 +1,9 @@
 import React from 'react'
 import './Home.css'
-import sidebar from './sidebar'
-import table from './table'
+import {Link} from 'react-router-dom'
+import Login from '../login/Login'
+import Sidebar from './sidebar'
+import Table from './table'
 const home = () => {
   return (
     <div>
@@ -10,9 +12,10 @@ const home = () => {
         <div></div>
         <div><h2>username</h2></div>
       </div>
-      <div>
-        <sidebar />
-        <table />
+      
+      <div className="components">
+        <Sidebar />
+        <Table />
       </div>
       
     </div>
@@ -20,3 +23,9 @@ const home = () => {
 }
 
 export default home
+
+
+    
+             
+
+        
