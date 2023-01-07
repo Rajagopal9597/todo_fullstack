@@ -1,4 +1,6 @@
 import React from 'react'
+import './Home.css'
+import {Link} from 'react-router-dom'
 
 const sidebar = () => {
   return (
@@ -9,7 +11,7 @@ const sidebar = () => {
           <h2>History</h2>
         </div>
         <div className="logout">
-            <h2>Log out</h2>
+          <Link to="/">Logout</Link>
         </div>
     </div>
     </div>
