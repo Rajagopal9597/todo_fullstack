@@ -9,7 +9,7 @@ Router.use(bodyParser());
 Router.post("/register", async (req, res) => {
     try {
         const { userName, password } = req.body;
-        const fetchedUser = await Users.find({ userName: userName });
+        const fetchedUser = await UserTodo.find({ userName: userName });
         // console.log(fetchedUser);
         if (!(fetchedUser.length === 0)) {
             // console.log("in if cond");
@@ -26,7 +26,7 @@ Router.post("/register", async (req, res) => {
                         message : "invalid details"
                     })
                 }
-                const user = await Users.create({
+                const user = await UserTodo.create({
                     userName: userName,
                     password : hash
                 })
