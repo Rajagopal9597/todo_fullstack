@@ -9,7 +9,7 @@ Router.use(bodyParser());
 
 Router.post('/login',async (req,res)=>{
     try{
-        let user = await Users.find({userName : req.body.userName});
+        let user = await UserTodo.find({userName : req.body.userName});
         if(user.length===0){
             return res.status(400).json({
                 status:"failed",
