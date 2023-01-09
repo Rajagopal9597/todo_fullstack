@@ -4,8 +4,11 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const Users = require("../models/user");
 SECRET = "RESTAPI"
+const cors = require("cors");
+
 
 Router.use(bodyParser());
+Router.use(cors("*"));
 
 Router.post('/login',async (req,res)=>{
     try{
