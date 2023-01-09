@@ -2,9 +2,11 @@ const Router = require("express").Router();
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const Users = require("../models/user");
+const cors = require("cors");
 
 
 Router.use(bodyParser());
+Router.use(cors("*"));
 
 Router.post("/register", async (req, res) => {
     try {
